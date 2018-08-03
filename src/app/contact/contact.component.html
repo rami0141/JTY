@@ -1,0 +1,102 @@
+<div class="container mt-2">
+  <div class="row mt-5 mb-5 animated fadeIn">
+    <div class="col-4 text-center hello z-depth-3">
+      <!--Buttons-->
+          <!-- <div mdbBtn floating="true" color="grey lighten-3" class="accent-1 p-1 waves-light mt-5" mdbWavesEffect> -->
+            <i class="fa fa-map-marker mt-5 blue-grey-text"></i>
+          <!-- </div> -->
+          <p>Minneapolis, MN</p>
+          <p>United States</p>
+
+          <!-- <a mdbBtn floating="true" color="grey lighten-3" class="accent-1 p-1 waves-light mt-5" mdbWavesEffect> -->
+            <i class="fa fa-phone mt-5 blue-grey-text"></i>
+          <!-- </a> -->
+          <p>612-000-0000</p>
+          <p>Mon - Fri, 8:00am -5:00pm</p>
+
+
+          <!-- <a mdbBtn floating="true" color="grey lighten-3" class="accent-1 p-1 waves-light mt-5" mdbWavesEffect> -->
+            <i class="fa fa-envelope mt-5 blue-grey-text"></i>
+          <!-- </a> -->
+          <p>info@gmail.com</p>
+          <p>sale@gmail.com</p>
+      </div>
+
+<!-- Form -->
+    <div class="col-8">
+      <!-- contact form -->
+      <form [formGroup]="contactForm" class="z-depth-3">
+        <h3 class="h5 text-center mb-4 blue-grey-text">Send a message</h3>
+        <div class="md-form">
+          <i class="fa fa-user prefix blue-grey-text"></i>
+          <input
+            type="text"
+            name="contactFormName"
+            id="contactFormName"
+            formControlName="contactFormName"
+            class="form-control"
+            mdbInputDirective
+            #contactFormName/>
+          <label for="contactFormName">Your name</label>
+        </div>
+        <div class="md-form">
+          <i class="fa fa-envelope prefix blue-grey-text"></i>
+          <input
+            type="email"
+            id="contactFormEmail"
+            formControlName="contactFormEmail"
+            class="form-control"
+            mdbInputDirective
+            #contactFormEmail/>
+          <label for="contactFormEmail">Your email</label>
+        </div>
+
+        <div class="md-form">
+          <i class="fa fa-tag prefix blue-grey-text"></i>
+          <input
+            type="text"
+            id="contactFormSubject"
+            formControlName="contactFormSubject"
+            class="form-control"
+            mdbInputDirective
+              #contactFormSubject/>
+          <label for="contactFormSubject">Subject</label>
+        </div>
+
+        <div class="md-form">
+          <i class="fa fa-pencil prefix blue-grey-text"></i>
+          <textarea
+            type="text"
+            id="contactFormMessage"
+            formControlName="contactFormMessage"
+            class="md-textarea"
+            style="height: 100px"
+            mdbInputDirective
+            #contactFormMessage></textarea>
+          <label for="contactFormMessage">Your message</label>
+        </div>
+        <!-- Buttons -->
+        <div class="text-center">
+          <button
+            type="submit"
+            (click)="reset()"
+            mdbBtn color="unique"
+            class="waves-light"
+            mdbWavesEffect>Clear
+          </button>
+          <button
+            type="submit"
+            (click)="addForm(contactFormName.value, contactFormEmail.value, contactFormSubject.value, contactFormMessage.value)"
+            mdbBtn color="cyan"
+            class="waves-light"
+            [disabled]="!contactForm.valid"
+            mdbWavesEffect>Send
+            <i class="fa fa-paper-plane-o ml-1"></i>
+          </button>
+        </div>
+      </form>
+      <!-- contact form -->
+
+    </div>
+  </div>
+</div>

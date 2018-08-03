@@ -1,0 +1,13 @@
+img {
+  width: 25%;
+  height: 90%;
+  padding: 10px;
+}
+
+.container {
+  border-top: 1px solid black;
+}
+
+.pictures {
+  height: 400px;
+}

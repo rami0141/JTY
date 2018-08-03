@@ -1,0 +1,100 @@
+.navbar {
+    position: relative;
+    height: 100px;
+    width: 100%;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.navbar-brand {
+    position: absolute;
+    left: 49%;
+    font-size: 28px;
+    margin-left: -20px !important;  /* 50% of your logo width */
+    display: block;
+}
+
+i {
+  font-size: 20px;
+  margin: 5px;
+}
+
+.right {
+  position: absolute;
+  left: 78%;
+}
+
+.home {
+  position: absolute;
+  left: 25%;
+  margin-top: 48px;
+  color: #607d8b;
+  transition: 0.6s;
+  padding: 0 10px;
+}
+
+
+.home:hover, .portfolio:hover, .contact:hover {
+  background-color: black;
+  color: white;
+  padding: 18px 10px;
+}
+
+.left {
+  border-bottom: 2px solid black;
+  margin-bottom: 25px;
+}
+
+.portfolio {
+  position: absolute;
+  left: 44%;
+  margin-left: -5px;
+  margin-top: 48px;
+  color: #607d8b;
+  transition: 0.4s;
+  padding: 0 10px;
+}
+
+.contact {
+  position: absolute;
+  left: 68%;
+  margin-top: 48px;
+  color: #607d8b;
+  transition: 0.4s;
+  padding: 0 10px;
+}
+
+
+@media (min-width: 768px) {
+  .portfolio {
+    left: 44%;
+  }
+  .right {
+    left: 84%;
+  }
+  i {
+      font-size: 24px;
+      margin: 10px;
+      left:
+  }
+}
+
+@media (min-width: 992px) {
+  .portfolio {
+    left: 45%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .portfolio {
+    left: 46%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .portfolio {
+    left: 47%;
+  }
+}
